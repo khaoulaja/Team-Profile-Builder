@@ -2,7 +2,8 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-
+const generatPage = require('./src/page-template')
+let manager;
 const engineers=[];
 const interns=[];
 
@@ -21,7 +22,7 @@ const menu = ()=>{
         else if (action === 'Add Intern') {
             promptIntern();
         } else {
-            buildTeam();
+           console.log(generatPage(manager,engineers,interns));
         }
     })
 }
@@ -78,7 +79,7 @@ const promptManager = () =>{
         }
         
     ]).then(({mgrName, mgrId, mgrEmail, mgrOfficenum})=>{
-       var manager = new Manager(mgrName, mgrId, mgrEmail,mgrOfficenum);
+        manager = new Manager(mgrName, mgrId, mgrEmail,mgrOfficenum);
         console.log(manager);
         menu();
     })
@@ -211,7 +212,5 @@ const promptIntern = ()=>{
         menu();
     });
 }
-const buildTeam = ()=> {
-    console.log('Team');
-}
+
 promptManager();
