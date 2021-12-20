@@ -2,7 +2,9 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const generatPage = require('./src/page-template')
+const generatPage = require('./src/page-template');
+const {writeFile, copyFile} = require('./src/generate-site');
+
 let manager;
 const engineers=[];
 const interns=[];
@@ -22,7 +24,19 @@ const menu = ()=>{
         else if (action === 'Add Intern') {
             promptIntern();
         } else {
-           console.log(generatPage(manager,engineers,interns));
+         let data =  generatPage(manager,engineers,interns);
+         writeFile(data)
+         .then( message =>{
+             console.log(message);
+             return copyFile()
+         }).then(copyFileRes =>{
+             console.log(copyFileRes);
+         })
+         .catch(err =>{
+             console.log(err);
+         })
+         
+          
         }
     })
 }
