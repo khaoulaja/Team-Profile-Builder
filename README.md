@@ -4,7 +4,7 @@
 
   This is a command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person. <br/><br/>
 
-  ![sample readme](./team-generator.png)
+  ![sample](./team-generator.png)
 
   ## Installation
   
@@ -12,7 +12,7 @@
   
   ## Usage 
 
-   To use this application run : <br/> node index.js <br/>
+   To use this application run : <br/> node index.js <br/><br/>
    For a demonstration about how to generate the team profile visit the [walkthrough video](https://watch.screencastify.com/v/giDjMHUtgnU9RHnG41zU)
 
  ## Tests

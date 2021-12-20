@@ -24,7 +24,7 @@ const menu = ()=>{
         else if (action === 'Add Intern') {
             promptIntern();
         } else {
-         let data =  generatPage(manager,engineers,interns);
+         const data =  generatPage(manager,engineers,interns);
          writeFile(data)
          .then( message =>{
              console.log(message);
@@ -40,7 +40,7 @@ const menu = ()=>{
         }
     })
 }
-
+//manager prompts
 const promptManager = () =>{
     return inquirer.prompt([
         {
@@ -93,6 +93,7 @@ const promptManager = () =>{
         }
         
     ]).then(({mgrName, mgrId, mgrEmail, mgrOfficenum})=>{
+        //create new manager with the returned object
         manager = new Manager(mgrName, mgrId, mgrEmail,mgrOfficenum);
         console.log(manager);
         menu();
@@ -158,6 +159,7 @@ const promptEngineer = ()=>{
        }
    ])
    .then(({engName, engId, engEmail, engGithub})=>{
+       //create new engineer and push it to engineers array
        engineers.push( new Engineer(engName, engId, engEmail, engGithub));
        console.log(engineers);
        menu();
@@ -221,6 +223,7 @@ const promptIntern = ()=>{
         }
     ])
     .then(({intName, intId, intEmail, intSchool})=>{
+        //create new intern and push it to interns array
         interns.push( new Intern(intName, intId, intEmail, intSchool));
         console.log(interns);
         menu();

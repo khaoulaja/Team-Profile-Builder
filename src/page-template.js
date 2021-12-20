@@ -16,6 +16,7 @@ const generateManager = (manager)=>{
   </div>`;
 };
 
+//create engineer card for each engineer
 const generateEngineer =(engineers)=>{
     if(!engineers){
         return '';
@@ -38,6 +39,8 @@ const generateEngineer =(engineers)=>{
     </div>`
 }).join('')}`;
 };
+
+// create inter card for each 
 const generateIntern =(interns)=>{  
     if(!interns){
         return '';
@@ -61,6 +64,7 @@ const generateIntern =(interns)=>{
 }).join('')}`;
 };
 
+// page template
 const generatPage = (manager, engineers, interns)=>{
     return `
 <!DOCTYPE html>
