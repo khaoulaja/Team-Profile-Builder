@@ -13,7 +13,7 @@
   ## Usage 
 
    To use this application run : <br/> node index.js <br/><br/>
-   For a demonstration about how to generate the team profile visit the [walkthrough video](https://watch.screencastify.com/v/giDjMHUtgnU9RHnG41zU)
+   For a demonstration about how to generate the team profile visit the [walkthrough video](https://drive.google.com/file/d/17Jzf6GFXDn5bA5qvKL1vhPDTWY4otcdn/view)
 
  ## Tests
 
