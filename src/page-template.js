@@ -3,7 +3,7 @@ const generateManager = (manager)=>{
 
     return ` <div class="card shadow-lg">
     <div class="card-header">
-      <h3>${manager.getName()}</h3>
+      <h3 class="text-capitalize">${manager.getName()}</h3>
       <h5><i class="fas fa-mug-hot"></i> ${manager.getRole()}</h5>
     </div>
     <div class="card-body">
@@ -25,7 +25,7 @@ const generateEngineer =(engineers)=>{
     return `
     <div class="card shadow-lg">
         <div class="card-header">
-        <h3>${engineer.getName()}</h3>
+        <h3 class="text-capitalize">${engineer.getName()}</h3>
         <h5><i class="fas fa-glasses"></i> ${engineer.getRole()}</h5>
         </div>
         <div class="card-body">
@@ -47,7 +47,7 @@ const generateIntern =(interns)=>{
     return `
     <div class="card shadow-lg">
         <div class="card-header">
-        <h3>${intern.getName()}</h3>
+        <h3 class="text-capitalize">${intern.getName()}</h3>
         <h5><i class="fas fa-user-graduate"></i> ${intern.getRole()}</h5>
         </div>
         <div class="card-body">
